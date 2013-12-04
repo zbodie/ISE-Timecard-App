@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class MyActivity extends Activity {
     /**
@@ -26,6 +27,11 @@ public class MyActivity extends Activity {
     }
     public void startDummyActivity(){
         Intent dummyIntent = new Intent(this, DummyActivity.class);
+
+        final EditText usernameBox = (EditText) findViewById(R.id.usernameText);
+        final EditText passwordBox = (EditText) findViewById(R.id.passwordText);
+        dummyIntent.putExtra("username", usernameBox.getText().toString());
+        dummyIntent.putExtra("password", passwordBox.getText().toString());
         startActivity(dummyIntent);
     }
 }
