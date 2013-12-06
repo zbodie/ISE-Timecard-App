@@ -20,18 +20,18 @@ public class MyActivity extends Activity {
         signIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startDummyActivity();
+                startDayViewActivity();
             }
         });
 
     }
-    public void startDummyActivity(){
-        Intent dummyIntent = new Intent(this, DummyActivity.class);
+    public void startDayViewActivity(){
+        Intent dayViewIntent = new Intent(this, DayViewActivity.class);
 
         final EditText usernameBox = (EditText) findViewById(R.id.usernameText);
         final EditText passwordBox = (EditText) findViewById(R.id.passwordText);
-        dummyIntent.putExtra("username", usernameBox.getText().toString());
-        dummyIntent.putExtra("password", passwordBox.getText().toString());
-        startActivity(dummyIntent);
+        dayViewIntent.putExtra("username", usernameBox.getText().toString());
+        dayViewIntent.putExtra("password", passwordBox.getText().toString());
+        startActivity(dayViewIntent);
     }
 }
