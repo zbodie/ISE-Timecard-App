@@ -16,8 +16,8 @@ public class DayViewActivity extends Activity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.dayview);
-        CalendarView calendar = (CalendarView) findViewById(R.id.calendarView);
-        calendar.setShownWeekCount(1);
+        //CalendarView calendar = (CalendarView) findViewById(R.id.calendarView);
+        //calendar.setShownWeekCount(1);
 
 
     }
