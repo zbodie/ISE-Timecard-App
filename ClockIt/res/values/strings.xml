@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">ClockIt</string>
-</resources>
+    <string name = "app_name">ClockIt</string>
+    <string name = "prompt"> Select an activity </string>
+
+ </resources>
