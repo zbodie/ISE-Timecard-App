@@ -8,6 +8,12 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.Button;
+import android.view.View.OnClickListener;
+import android.util.Log;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
+
 
 import java.util.List;
 import java.util.ArrayList;
@@ -22,47 +28,25 @@ import java.util.ArrayList;
  */
 public class DayViewActivity extends Activity {
 
-    private int position = 0;
+    private final static String TAG = "TimeCard_Main";
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        setContentView(R.layout.dayview);
 
-        final Spinner spnActivities = (Spinner) findViewById(R.id.spinner_activities);
+        FragmentManager fragmentManager = getFragmentManager();
 
-        //List<String> list = new ArrayList<String>();
-        //list.add("list 1");
-        //list.add("list 2");
-        //ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, list);
-        //dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        //spnActivities.setAdapter(dataAdapter);
+        //DetailsFragment detailsFragment = (DetailsFragment) fragmentManager.findFragmentById(R.id.details_container);
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
-        ArrayAdapter<CharSequence> dataAdapter;
-        dataAdapter = ArrayAdapter.createFromResource(this, R.array.activities_array, android.R.layout.simple_spinner_item);
-        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
-        spnActivities.setAdapter(dataAdapter);
+        fragmentTransaction.add(R.id.frame_dayview, new DayViewFragment());
+        fragmentTransaction.add(R.id.frame_project_spinner, new ProjectSpinnerFragment());
+        fragmentTransaction.commit();
 
-        AdapterView.OnItemSelectedListener oisl;
-        oisl = new AdapterView.OnItemSelectedListener()
-        {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id )
-            {
-                DayViewActivity.this.position = position;
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent)
-            {
-                System.out.println("Do nothing");
-            }
-        };
-        spnActivities.setOnItemSelectedListener(oisl);
+    }
 
         //setContentView(R.layout.dayview);
         //CalendarView calendar = (CalendarView) findViewById(R.id.calendarView);
         //calendar.setShownWeekCount(1);
 
-
     }
-}

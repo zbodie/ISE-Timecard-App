@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:orientation="vertical"
-                android:layout_height="match_parent"
-                android:clickable="true"
-                android:focusable="true">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:baselineAligned="false"
+              android:orientation="vertical" >
 
-    <Spinner
-            android:id="@+id/spinner_activities"
+    <FrameLayout
+        android:id="@+id/frame_dayview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="15"
+    />
+    <FrameLayout
+            android:id="@+id/frame_project_spinner"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:entries="@array/activities_array"
-            android:prompt = "@string/prompt" />
+            android:layout_weight="1"
+    />
 
-</RelativeLayout>
+
+</LinearLayout>
