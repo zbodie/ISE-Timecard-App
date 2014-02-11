@@ -21,7 +21,7 @@ public class DayViewFragment extends Fragment {
 
     @Override
     public void onAttach(Activity activity) {
-        Log.i(TAG, getClass().getSimpleName() + ":entered onAttach()");
+        Log.i(TAG, getClass().getSimpleName() + ":entered onAttach() entered");
         super.onAttach(activity);
     }
 
