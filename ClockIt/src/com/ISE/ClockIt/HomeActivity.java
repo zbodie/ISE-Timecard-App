@@ -2,21 +2,8 @@ package com.ISE.ClockIt;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
-import android.widget.CalendarView;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
-import android.widget.Button;
-import android.view.View.OnClickListener;
-import android.util.Log;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-
-
-import java.util.List;
-import java.util.ArrayList;
 
 
 /**
@@ -26,13 +13,13 @@ import java.util.ArrayList;
  * Time: 5:46 PM
  * To change this template use File | Settings | File Templates.
  */
-public class DayViewActivity extends Activity {
+public class HomeActivity extends Activity {
 
     private final static String TAG = "TimeCard_Main";
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.dayview);
+        setContentView(R.layout.home);
 
         FragmentManager fragmentManager = getFragmentManager();
 
@@ -45,7 +32,7 @@ public class DayViewActivity extends Activity {
 
     }
 
-        //setContentView(R.layout.dayview);
+        //setContentView(R.layout.home);
         //CalendarView calendar = (CalendarView) findViewById(R.id.calendarView);
         //calendar.setShownWeekCount(1);
 

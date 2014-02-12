@@ -80,7 +80,7 @@ public class LoginActivity extends Activity {
     }
     public void startDayViewActivity(){
         Log.i(TAG, "Entered startDayViewActivity method");
-        Intent dayViewIntent = new Intent(LoginActivity.this, DayViewActivity.class);
+        Intent dayViewIntent = new Intent(LoginActivity.this, HomeActivity.class);
 
         final EditText usernameBox = (EditText) findViewById(R.id.usernameText);
         final EditText passwordBox = (EditText) findViewById(R.id.passwordText);

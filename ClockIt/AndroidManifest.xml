@@ -13,6 +13,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".DummyActivity" android:label="Dummy Page"/>
-        <activity android:name=".DayViewActivity"/>
+        <activity android:name=".HomeActivity"/>
     </application>
 </manifest>
